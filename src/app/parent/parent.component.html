@@ -1,0 +1,10 @@
+<p>parent works!</p>
+<button (click)="toggleChild()">Toggle Child</button>
+<input type="text" [(ngModel)]="myName">
+<div>
+    <h3>{{ myName }}</h3>
+</div>
+
+<app-child *ngIf="isChild" [myName]="myName">
+    <h2 #contentProjection>Content Projection</h2>
+</app-child>
